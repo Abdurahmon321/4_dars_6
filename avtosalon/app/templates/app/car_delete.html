@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Car</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .btn-danger {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete Car</h1>
+    <p>Are you sure you want to delete this car?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{% url 'bosh_sahifa' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</body>
+</html>

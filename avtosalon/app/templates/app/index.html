@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Avto Salon</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/styles.css'%}">
+</head>
+<body>
+    <header>
+        <h1>Avto Salon</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Bosh sahifa</a></li>
+                <li><a href="/avtomobillar">Avtomobillar</a></li>
+                <li><a href="/kontaktlar">Kontaktlar</a></li>
+                <li><a href="/add">Add car</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Yangiliklar</h2>
+        <p>Eng so'nggi avto modellari haqida yangiliklar</p>
+        <ul>
+            <li><a href="/car_update">Car update</a> </li>
+            <li><a href="/car_delete">Car delete</a> </li>
+            <li><a href="/category_add">Category add</a></li>
+            <li><a href="/category_detail">Category detail</a></li>
+            <li><a href="/category_update">Category update</a></li>
+            <li><a href="/category_delete">Category delete</a></li>
+            <li><a href="/color_detail">Color detail</a></li>
+            <li><a href="/color_update">Color update</a></li>
+            <li><a href="/color_add">Color add</a></li>
+            <li><a href="/color_delete">Color delete</a></li>
+
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Avto Salon</p>
+    </footer>
+</body>
+</html>

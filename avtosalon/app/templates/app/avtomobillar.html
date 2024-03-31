@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Avtomobillar</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Avtomobillar</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Bosh sahifa</a></li>
+                <li><a href="/avtomobillar">Avtomobillar</a></li>
+                <li><a href="/kontaktlar">Kontaktlar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Kategoriyalar</h2>
+        <ul>
+            <li><a href="#suvlar">Suvlar</a></li>
+            <li><a href="#sedanlar">Sedanlar</a></li>
+            <li><a href="#hetchbeklar">Hetchbeklar</a></li>
+        </ul>
+    </section>
+    <section id="suvlar">
+        <h2>Suvlar</h2>
+        {% for car in car %}
+            <div class="car">
+                <img src="{{ car.image.url }}" alt="{{ car.image.url }}">
+                <p><a href="/car_d/{{ car.id }}">{{ car.model }}</a></p>
+                <p>Yili: {{ car.year }}</p>
+                <p>Rangi: {{ car.color }}</p>
+                <p>Narxi: {{ car.price }} $</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Avto Salon</p>
+    </footer>
+</body>
+</html>
